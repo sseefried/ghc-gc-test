@@ -12,7 +12,7 @@ stack build
 
 > $FILE;
 
-for i in -N1 -N4 -N8; do
+for i in -qg -N; do
   (echo;echo;echo "------ With $i----- ";time \
     stack exec gc-test -- $SIZE +RTS $i -s) 2>&1 | tee -a $FILE
 done
