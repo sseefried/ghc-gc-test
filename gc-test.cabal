@@ -1,0 +1,26 @@
+name:                gc-test
+version:             0.1.0.0
+synopsis:            Project to demonstrate GC bug to Simon Marlow et al
+description:         Please see README.md
+homepage:            https://github.com/githubuser/gc-test#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Sean Seefried
+maintainer:          example@example.com
+copyright:           2016 Sean Seefried
+category:            Web
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+executable gc-test
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+  build-depends:       base
+                     , bifunctors
+                     , containers
+                     , directory
+                     , random
+                     , temporary
